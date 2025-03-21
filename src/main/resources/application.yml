@@ -3,8 +3,8 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/react-spring-blog
-    username: root
+    url: jdbc:mysql://db:3306/react-spring-blog?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: bloguser
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
 
@@ -13,9 +13,9 @@ spring:
     properties:
       hibernate:
         hibernate:
-        "[format_sql]": true            #SQL 보기 좋게 출력
-        "[user_sql_comments]": true     #SQL 생성시 주석 포함
-        "[highlight_sql]": true         #SQL 색깔
+        "[format_sql]": true #SQL 보기 좋게 출력
+        "[user_sql_comments]": true #SQL 생성시 주석 포함
+        "[highlight_sql]": true #SQL 색깔
         "[hbm2ddl.auto]": update
     open-in-view: true
     show-sql: true
